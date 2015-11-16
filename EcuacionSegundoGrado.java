@@ -15,7 +15,7 @@ public class EcuacionSegundoGrado{
 			valores[0]=leerCoeficientes("a:");
 			valores[1]=leerCoeficientes("b:");
 			valores[2]=leerCoeficientes("c:");
-			mostrarResultados(valores[0], valores[1], valores[2]);
+			mostrarResultados(valores);
 		}while(deseaContinuar());
 	}
 
@@ -26,9 +26,9 @@ public class EcuacionSegundoGrado{
 	/**
 	* Muestra en resultado de la ecuacion
 	*/
-	static void mostrarResultados(double a, double b, double c){
-		System.out.println("El resultado es: "+(-b+(Math.sqrt((b*b)-(4*a*c))))/(2*a)+
-				" y "+(-b-(Math.sqrt((b*b)-(4*a*c))))/(2*a));
+	static void mostrarResultados(double[] valores){
+		System.out.println("El resultado es: "+(-valores[1]+(Math.sqrt((valores[1]*valores[1])-(4*valores[0]*valores[2]))))/(2*valores[0])+
+				" y "+(-valores[1]-(Math.sqrt((valores[1]*valores[1])-(4*valores[0]*valores[2]))))/(2*valores[0]));
 	}
 
 	/**
