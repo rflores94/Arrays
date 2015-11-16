@@ -27,7 +27,7 @@ public class Alumnos{
 			
 			while (i<notas.length){
 				notas[i]=totalNotas();
-				System.out.print("\t"+notas[i]+"\t");
+				System.out.print("\t"+(int)notas[i]+"\t");
 				numaprobados+=contarAprobados(notas[i]);
 				numsuspensos+=contarSuspensos(notas[i]);
 				notamax=calcularMaxima(notas[i], notamax);
